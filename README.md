@@ -8,3 +8,7 @@ A simple program using Mediapipe and OpenCV to count the number of Squat done an
 <div align="center"> 
 <img src= "images/yt_squat.gif?raw=true" >
 </div>
+
+
+You may use the SquatCounter_Realtime in projects, changing the variables as necessary.
+
