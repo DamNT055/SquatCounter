@@ -1,1 +1,1 @@
-# Squat Counter & angle estimation 
+# Squat counter & angle estimation 
