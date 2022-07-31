@@ -5,6 +5,6 @@ A simple program using Mediapipe and OpenCV to count the number of Squat done an
 
 
 
-
-![alt text](images/yt_squat.gif?style=centerme)
-
+<div align="center"> 
+<img src= "images/yt_squat.gif?raw=true" >
+</div>
