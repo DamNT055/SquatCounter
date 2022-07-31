@@ -1,1 +1,1 @@
-# SquatCounter
+# Squat Counter 
