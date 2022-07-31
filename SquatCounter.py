@@ -1,29 +1,19 @@
 import cv2
-from cv2 import destroyAllWindows
 import mediapipe as mp
 import numpy as np
+from AngleModule import calculate_angle 
+
+
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
-from AngleModule import calculate_angle, rescale_frame 
-
-
-angle_min = []
-angle_min_hip = []
-cap = cv2.VideoCapture(0)
-
-
 
 cap = cv2.VideoCapture(0)
 # Curl counter variables
 counter = 0 
 stage = None
 
-"""width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH) + 0.5)
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT) + 0.5)
-size = (width, height)
-fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-out = cv2.VideoWriter('your_video.mp4', fourcc, 10.0, size, True)"""
+
 
 with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
     while cap.isOpened():
@@ -118,7 +108,6 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
                                 mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2) 
                                  )               
         
-        #out.write(image)
         cv2.imshow('Mediapipe Feed', image)
 
         if cv2.waitKey(10) & 0xFF == ord('q'):
